@@ -16,44 +16,48 @@ Player::Player() {
 
 Player* selectClass() {
 	Player* p = nullptr;
-	int numClass;
+	int numClass=0;
 	std::string playerName;
 	std::cout << "Type 1 for: Warrior or  2 for: Wizzard or 3 for: Rogue\n";
 	std::cout << "IF YOU DON'T TYPE 1, 2 OR 3 THE GAME WILL CLOSE\n";
-	std::cin >> numClass;
-	if (numClass == 1) {
-		std::cout << "Enter your name: \n";
-		std::cin >> playerName;
+	while (numClass == 0) {
+		std::cin >> numClass;
+		if (numClass == 1) {
+			std::cout << "Enter your name: \n";
+			std::cin >> playerName;
 
-		std::cout << playerName << " From now on you are a Warrior!\n";
-		p = new Warrior(playerName);
+			std::cout << playerName << " From now on you are a Warrior!\n";
+			p = new Warrior(playerName);
 
+			break;
 
-	}
-	else if (numClass == 2) {
-		std::cout << "Enter your name: \n";
-		std::cin >> playerName;
-		std::cout << playerName << " From now on you are a Wizzard!\n";
+		}
+		else if (numClass == 2) {
+			std::cout << "Enter your name: \n";
+			std::cin >> playerName;
+			std::cout << playerName << " From now on you are a Wizzard!\n";
 
-		p = new Wizzard(playerName);
-	}
-	else if (numClass == 3) {
-		std::cout << "Enter your name: \n";
-		std::cin >> playerName;
-		std::cout << playerName << " From now on you are a Rogue!\n";
+			p = new Wizzard(playerName);
+			break;
+		}
+		else if (numClass == 3) {
+			std::cout << "Enter your name: \n";
+			std::cin >> playerName;
+			std::cout << playerName << " From now on you are a Rogue!\n";
 
-		p = new Rogue(playerName);
-	}
-	else {
-		std::cout << "Invalid Input!\n";
-		std::cout << "The game is exiting...\n";
-		exit(0);
+			p = new Rogue(playerName);
+			break;
+		}
+		else {
+			std::cout << "Invalid Input! Type Again:\n";
+
+			numClass = 0;
+
+		}
 
 	}
 	return p;
 }
-
-
 
 
 

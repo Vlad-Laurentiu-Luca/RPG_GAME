@@ -56,7 +56,7 @@ void Intro::mainMenu()
 		else {
 
 
-			std::cout << "Invalid input! Try again: \n";
+			std::cout << "Invalid input! Try again: (Type only y/yes/Yes or n/no/No)\n";
 			answer = "";
 			continue;
 
