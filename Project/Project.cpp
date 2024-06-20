@@ -68,8 +68,8 @@ int main()
     std::cout << "You encountered a mutant rabbit that is x3 bigger than you!\n";
     
     Army1_Monsters* army1 = new Army1_Monsters(100);
-    std::cout << "Type F or f in order to hit it in the head!\n";
-    std::cout << "Type G or G in order to hit it in the chest!\n";
+    std::cout << "Type F or f in order to hit it in the head with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest with your " << item->itemName << "!" << std::endl;
 
     std::string answer="";
     while (answer.empty()) {
@@ -179,8 +179,8 @@ int main()
     }
     //continuare dupa atac
     
-    std::cout << "Type F or f in order to hit it in the head again!\n";
-    std::cout << "Type G or G in order to hit it in the chest again!\n";
+    std::cout << "Type F or f in order to hit it in the head again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest again with your " << item->itemName << "!" << std::endl;
 
     std::string answer1 = "";
     while (answer1.empty()) {
@@ -286,9 +286,9 @@ int main()
 
     }
 
-
-    std::cout << "Type F or f in order to hit it in the head again!\n";
-    std::cout << "Type G or G in order to hit it in the chest again!\n";
+    std::cout << "Type F or f in order to hit it in the head again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest again with your " << item->itemName << "!" << std::endl;
+   
 
     std::string answer2 = "";
     while (answer2.empty()) {
@@ -379,7 +379,7 @@ int main()
         }
         else if (dodge2 == "Dash" or dodge2 == "dash" or dodge2 == "d") {
             std::this_thread::sleep_for(std::chrono::seconds(1));
-            std::cout << "You succefully dodged the attack!\n";
+            std::cout << "You easily managed to slip between it's legs\n";
 
             
             
@@ -404,8 +404,8 @@ int main()
 
     //aici nu am un answer/attack, doar dodge 2 si 3
 
-    std::cout << "Type F or f in order to hit it in the head again!\n";
-    std::cout << "Type G or G in order to hit it in the chest again!\n";
+    std::cout << "Type F or f in order to hit it in the back with your " << item->itemName << "!"<< std::endl;
+    std::cout << "Type G or G in order to hit it in the back of the neck with your " << item->itemName << "!" << std::endl;
     std::string answer3 = "";
     while (answer3.empty()) {
         std::cin >> answer3;
@@ -456,6 +456,7 @@ int main()
 
 
     std::string dodge3 = "";
+    std::cout << "It turns back at you and starts shouting at you: Kirttss! KIRSTTTS!!! \n";
     std::cout << "Type Left or Right or right or r or d (to dash) in order to dodge!\n";
     std::this_thread::sleep_for(std::chrono::seconds(1));
 
@@ -516,8 +517,8 @@ int main()
 
 
 
-    std::cout << "Type F or f in order to hit it in the head again!\n";
-    std::cout << "Type G or G in order to hit it in the chest again!\n";
+    std::cout << "Type F or f in order to hit it in the head again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest again with your " << item->itemName << "!" << std::endl;
 
     std::string answer4 = "";
     while (answer4.empty()) {
@@ -628,8 +629,8 @@ int main()
 
 
 
-    std::cout << "Type F or f in order to hit it in the head again!\n";
-    std::cout << "Type G or G in order to hit it in the chest again!\n";
+    std::cout << "Type F or f in order to hit it in the head again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest again with your " << item->itemName << "!" << std::endl;
 
     std::string answer5 = "";
     while (answer5.empty()) {
@@ -724,7 +725,7 @@ int main()
         else if (dodge5 == "Dash" or dodge5 == "dash" or dodge5 == "d") {
             std::this_thread::sleep_for(std::chrono::seconds(1));
 
-            std::cout << "You succefully dodged the attack!\n";
+            std::cout << "You managed to slip through the rabbit's legs again!\n";
 
 
             
@@ -749,8 +750,8 @@ int main()
 
 
 
-    std::cout << "Type F or f in order to hit it in the head again!\n";
-    std::cout << "Type G or G in order to hit it in the chest again!\n";
+    std::cout << "Type F or f in order to hit it in the back again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the legs with your " << item->itemName << "!" << std::endl;
 
     std::string answer6 = "";
     while (answer6.empty()) {
@@ -803,7 +804,7 @@ int main()
 
 
 
-
+    std::cout << "It turn again and starts a surprise attack (It is using it's special attack named SARUKE, be careful!)\n";
     std::string dodge6 = "";
     std::cout << "Type Left or Right or right or r or d (to dash) in order to dodge!\n";
     std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -878,7 +879,270 @@ int main()
     }
 
 
+    //aici am mai adaugat 2
 
+
+
+    std::cout << "Type F or f in order to hit it in the head again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest again with your " << item->itemName << "!" << std::endl;
+
+    std::string answer8 = "";
+    while (answer8.empty()) {
+        std::cin >> answer8;
+        if (answer8 == "F" or answer8 == "f") {
+
+
+
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            std::cout << "You missed! \n";
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+        }
+        else if (answer8 == "G" or answer8 == "g") {
+
+
+
+            army1->takeDamage(35);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            std::cout << "You gave 35 Hp damage to the rabbit! \n";
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            if (army1->getHP() <= 0) {
+                std::cout << "You Won the Game!\n";
+                std::cout << "The First Part is completed, the next part will be done soon!\n";
+                exit(0);
+
+            }
+        }
+        else {
+            std::cout << "Invalid input!\n";
+            std::cout << "Type again just f or F\n";
+
+            answer8 = "";
+            continue;
+        }
+
+        std::cout << "Monster hp: " << army1->getHP() << '\n';
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+
+
+
+
+    std::string dodge8 = "";
+    std::cout << "Type Left or Right or right or r or d (to dash) in order to dodge!\n";
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
+    while (dodge8.empty()) {
+
+        std::cin >> dodge8;
+        if (dodge8 == "Right" || dodge8 == "right" || dodge8 == "r") {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+
+            std::cout << "You tried to dodge but you got hit in the head!(You lost 40 hp)\n";
+            p2->primesteDamage(40);
+            std::cout << "Now you have " << p2->getHpPlayer() << " hp left!\n";
+
+            if (p2->getHpPlayer() <= 0) {
+                std::cout << "Game Over! You have no HP left.\n";
+                exit(0);
+            }
+
+
+        }
+        else if (dodge8 == "Left" or dodge8 == "left" or dodge8 == "l") {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+
+
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            std::cout << "You succefully dodged the attack!\n";
+
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+
+
+
+
+
+
+        }
+        else if (dodge8 == "Dash" or dodge8 == "dash" or dodge8 == "d") {
+
+            std::cout << "You tried to dodge but you got hit in the head!(You lost 40 hp)\n";
+            p2->primesteDamage(40);
+            std::cout << "Now you have " << p2->getHpPlayer() << " hp left!\n";
+
+            if (p2->getHpPlayer() <= 0) {
+                std::cout << "Game Over! You have no HP left.\n";
+                exit(0);
+
+            }
+
+        }
+        else {
+            std::cout << "Invalid Input!\n";
+            std::cout << "Try again to type d or D or Dash!\n";
+            dodge8 = "";
+            continue;
+        }
+
+
+
+
+
+    }
+
+
+
+    //aici inca 2
+
+
+    std::cout << "Type F or f in order to hit it in the head again with your " << item->itemName << "!" << std::endl;
+    std::cout << "Type G or G in order to hit it in the chest again with your " << item->itemName << "!" << std::endl;
+
+    std::string answer9 = "";
+    while (answer9.empty()) {
+        std::cin >> answer9;
+        if (answer9 == "F" or answer9 == "f") {
+
+
+
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            std::cout << "You missed! \n";
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+        }
+        else if (answer9 == "G" or answer9 == "g") {
+
+
+
+            army1->takeDamage(35);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            std::cout << "You gave 35 Hp damage to the rabbit! \n";
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            if (army1->getHP() <= 0) {
+                std::cout << "You Won the Game!\n";
+                std::cout << "The First Part is completed, the next part will be done soon!\n";
+                exit(0);
+
+            }
+        }
+        else {
+            std::cout << "Invalid input!\n";
+            std::cout << "Type again just f or F\n";
+
+            answer9 = "";
+            continue;
+        }
+
+        std::cout << "Monster hp: " << army1->getHP() << '\n';
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+
+
+
+
+    std::string dodge9 = "";
+    std::cout << "Type Left or Right or right or r or d (to dash) in order to dodge!\n";
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
+    while (dodge9.empty()) {
+
+        std::cin >> dodge9;
+        if (dodge9 == "Right" || dodge9 == "right" || dodge9 == "r") {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+
+            std::cout << "You tried to dodge but you got hit in the head!(You lost 40 hp)\n";
+            p2->primesteDamage(40);
+            std::cout << "Now you have " << p2->getHpPlayer() << " hp left!\n";
+
+            if (p2->getHpPlayer() <= 0) {
+                std::cout << "Game Over! You have no HP left.\n";
+                exit(0);
+            }
+
+
+        }
+        else if (dodge9 == "Left" or dodge9 == "left" or dodge9 == "l") {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+
+
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            std::cout << "You succefully dodged the attack!\n";
+
+
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+
+
+
+
+
+
+        }
+        else if (dodge9 == "Dash" or dodge9 == "dash" or dodge9 == "d") {
+
+            std::cout << "You tried to dodge but you got hit in the head!(You lost 40 hp)\n";
+            p2->primesteDamage(40);
+            std::cout << "Now you have " << p2->getHpPlayer() << " hp left!\n";
+
+            if (p2->getHpPlayer() <= 0) {
+                std::cout << "Game Over! You have no HP left.\n";
+                exit(0);
+
+            }
+
+        }
+        else {
+            std::cout << "Invalid Input!\n";
+            std::cout << "Try again to type d or D or Dash!\n";
+            dodge9 = "";
+            continue;
+        }
+
+
+
+
+
+    }
 
 
 

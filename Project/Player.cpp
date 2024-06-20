@@ -19,7 +19,7 @@ Player* selectClass() {
 	int numClass=0;
 	std::string playerName;
 	std::cout << "Type 1 for: Warrior or  2 for: Wizzard or 3 for: Rogue\n";
-	std::cout << "IF YOU DON'T TYPE 1, 2 OR 3 THE GAME WILL CLOSE\n";
+	
 	while (numClass == 0) {
 		std::cin >> numClass;
 		if (numClass == 1) {
@@ -338,7 +338,19 @@ void Player::addItemToInventory(Item* numeItem) {
 		}
 		else if (answer == "no") {
 			std::cout << "Ok, you chose not to sotre the items in your inventory!" << std::endl;
-			break;
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+
+			std::cout << "You encountered an evil Warrior\n";
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+
+			std::cout << "Due to the fact that you don't have a weapon to defend yourself you decided to forfeit..\n";
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+
+			std::cout << "He decided to cut your head off\n";
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+
+			std::cout << "GAME OVER!\n";
+			exit(0);
 		}
 		else {
 			std::cout << "Invalid input!" << " Type again just yes or no !\n";
